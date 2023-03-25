@@ -14,7 +14,7 @@ N | Check Name   | Status
 4 | Neg: Check (POST) creating  an order with wrong parameters (code 415)     | Pass
 5 | Neg: Check (GET)  an existing order has status "open"     | Pass
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Check-list  in PetStoreAPI:
 
