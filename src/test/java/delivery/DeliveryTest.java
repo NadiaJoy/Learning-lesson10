@@ -129,7 +129,7 @@ public class DeliveryTest {
     @Test
     public void getNonExistingOrderById() {
 
-        int id = 2806;
+        int id = 3000;
         String response = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", "Bearer " + token)
