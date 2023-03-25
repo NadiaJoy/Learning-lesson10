@@ -87,7 +87,7 @@ public class DeliveryTest {
     @Test
     public void createOrderWithoutTokenTest() {
 
-        OrderRealDto orderRealDto = new OrderRealDto("testname", "76567890", "");
+        OrderRealDto orderRealDto = new OrderRealDto("testusername", "76567890", "");
 
         Gson gson = new Gson();
 
