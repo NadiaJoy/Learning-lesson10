@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework 10 + lesson 11">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PetStoreApiTest.java" afterDir="false" />
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework 11 (lesson 13)">
+      <change afterPath="$PROJECT_DIR$/settings.example.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/CredentialsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/OrderRealDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/OrderTestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PetStoreAPI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,117 +53,113 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Margo/IdeaProjects/Learning-lesson10",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Margo\IdeaProjects\Learning-lesson10" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dto" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PetStoreAPI.checkBodyResponseStatusApproved">
-    <configuration name="ApiTest.createOrderAndCheckStatusCode200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeliveryTest.createOrderWithoutTokenTest">
+    <configuration name="DeliveryTest.createOrderWithEmptyCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="delivery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ApiTest" />
-      <option name="METHOD_NAME" value="createOrderAndCheckStatusCode200" />
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="createOrderWithEmptyCommentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreAPI.checkBodyResponseStatusApproved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.createOrderWithoutTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="delivery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="checkBodyResponseStatusApproved(int)" />
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="createOrderWithoutTokenTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreAPI.getNegativeTest400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.deleteOrderByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="delivery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="getNegativeTest400(int)" />
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="deleteOrderByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreAPI.getNegativeTest400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.gerNonExistingOrderById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="delivery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="getNegativeTest400(double)" />
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="gerNonExistingOrderById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreAPI.getNegativeTest404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.getOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="delivery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="getNegativeTest404(int)" />
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="getOrders" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Learning-homework10" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Learning-homework10" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetStoreAPI.checkBodyResponseStatusApproved" />
-        <item itemvalue="JUnit.ApiTest.createOrderAndCheckStatusCode200" />
-        <item itemvalue="JUnit.PetStoreAPI.getNegativeTest400 (1)" />
-        <item itemvalue="JUnit.PetStoreAPI.getNegativeTest400" />
-        <item itemvalue="JUnit.PetStoreAPI.getNegativeTest404" />
+        <item itemvalue="JUnit.DeliveryTest.createOrderWithoutTokenTest" />
+        <item itemvalue="JUnit.DeliveryTest.createOrderWithEmptyCommentTest" />
+        <item itemvalue="JUnit.DeliveryTest.getOrders" />
+        <item itemvalue="JUnit.DeliveryTest.gerNonExistingOrderById" />
+        <item itemvalue="JUnit.DeliveryTest.deleteOrderByIdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,10 +172,26 @@
       <option name="presentableId" value="Default" />
       <updated>1678381852894</updated>
     </task>
+    <task id="LOCAL-00001" summary="Homework 10 + lesson 11">
+      <created>1678734148230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678734148230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework 10 + lesson 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework 10 + lesson 11" />
+    <MESSAGE value="Homework 11 (lesson 13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework 11 (lesson 13)" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((RestAssuredResponseImpl)response).groovyResponse" custom="io.restassured.internal.RestAssuredResponseImpl" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

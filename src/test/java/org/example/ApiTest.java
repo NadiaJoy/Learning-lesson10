@@ -1,7 +1,9 @@
 package org.example;
 
-import dto.OrderDto;
+import com.google.gson.Gson;
+import dto.OrderTestDto;
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
@@ -11,6 +13,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ApiTest {
 
@@ -33,7 +37,7 @@ public class ApiTest {
         then().
                 log().
                 all().
-                statusCode(200);
+                statusCode(HttpStatus.SC_OK);
     }
 
     @ParameterizedTest
@@ -69,24 +73,43 @@ public class ApiTest {
 
     @Test
     public void createOrderAndCheckStatusCode200() {
-       // OrderDto orderdto = new OrderDto("testname", "123456", "comment");
+        // OrderDto orderdto = new OrderDto("testname", "123456", "comment");
 
-        OrderDto orderDtoRandom = new OrderDto();
-        orderDtoRandom.setCustomerName( generateRandomName() );
-        orderDtoRandom.setCustomerPhone(RandomStringUtils.random(10, false, true));
-        orderDtoRandom.setComment(RandomStringUtils.random(40, true, true));
+        OrderTestDto orderTestDtoRandom = new OrderTestDto();
+        orderTestDtoRandom.setCustomerName(generateRandomName());
+        orderTestDtoRandom.setCustomerPhone(generateRandomPhone());
+        orderTestDtoRandom.setComment(generateRandomComment());
 
-        given()
+        Gson gson = new Gson();
+        Response response = given()
                 .header("Content-type", "application/json")
-                .body(orderDtoRandom)
+                .body(orderTestDtoRandom)
                 .log()
                 .all()
                 .post("/test-orders")
                 .then()
                 .log()
                 .all()
-                .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+//                .assertThat()
+//                .statusCode(HttpStatus.SC_OK);
+                .extract().response();
+
+        //3 deserealization
+        OrderTestDto orderTestDtoReceived = gson.fromJson(response.asString(), OrderTestDto.class);
+
+        assertEquals(orderTestDtoRandom.getCustomerName(), orderTestDtoReceived.getCustomerName());
+        assertEquals(orderTestDtoRandom.getCustomerPhone(), orderTestDtoReceived.getCustomerPhone());
+        assertEquals(orderTestDtoRandom.getComment(), orderTestDtoReceived.getComment());
+
+        Assertions.assertNotNull(orderTestDtoReceived.getId());
+        Assertions.assertNull(orderTestDtoReceived.getStatus());
+
+        assertAll(
+                "Grouped Assertions of User",
+                () -> assertEquals("noo", orderTestDtoReceived.getComment(), "1 st Assert"),
+                () -> assertEquals("testnamee", orderTestDtoReceived.getCustomerName(), "2nd Assert")
+        );
+
     }
 
     @Test
@@ -121,12 +144,20 @@ public class ApiTest {
                         extract().
                         path("status");
 
-        Assertions.assertEquals(status, "OPEN");
+        assertEquals(status, "OPEN");
     }
 
-    public String generateRandomName () {
-        return RandomStringUtils.random (20, true, false);
-
-
+    public String generateRandomName() {
+        return RandomStringUtils.random(20, true, false);
     }
+
+    public String generateRandomPhone() {
+        return RandomStringUtils.random(10, false, true);
+    }
+
+    public String generateRandomComment() {
+        return RandomStringUtils.random(40, true, true);
+    }
+
 }
+

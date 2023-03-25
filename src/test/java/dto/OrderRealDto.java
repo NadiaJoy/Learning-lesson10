@@ -1,17 +1,22 @@
 package dto;
 
-public class OrderDto {
+public class OrderRealDto {
     private String customerName;
     private String customerPhone;
     private String comment;
+    //extra fields for response
+    private String status;
+    private int courierId;
+    private long id;
 
-    public OrderDto(String customerName, String customerPhone, String comment) {
+    public OrderRealDto(String customerName, String customerPhone, String comment) {
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.comment = comment;
+        this.status = "OPEN";
     }
 
-    public OrderDto() {
+    public OrderRealDto() {
     }
 
     public String getCustomerName() {
@@ -36,5 +41,17 @@ public class OrderDto {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public int getCourierId() {
+        return courierId;
+    }
+
+    public long getId() {
+        return id;
     }
 }
