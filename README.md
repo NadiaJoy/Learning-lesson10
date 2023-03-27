@@ -1,11 +1,6 @@
-
-Swagger Endpoints: http://51.250.6.164:8080/test-orders/
 Using JDK 11, JUnit framework v5, Maven Plugins
 
 Check-list in ApiTest:
-Swagger Endpoints: http://51.250.6.164:8080/test-orders/
-Using JDK 11, JUnit framework v5, Maven Plugins
-
 N | Check Name   | Status
 -- | -------------|--------
 1 | Pos: Check (GET) status code 200 for id between 1 and 10  | Pass
