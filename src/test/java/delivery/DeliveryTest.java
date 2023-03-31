@@ -1,6 +1,7 @@
 package delivery;
 
 import com.google.gson.Gson;
+import dto.CourierCreation;
 import dto.OrderRealDto;
 import helpers.SetupFunctions;
 import io.restassured.RestAssured;
@@ -146,7 +147,6 @@ public class DeliveryTest {
                 .asString();
 
         Assertions.assertEquals("", response);
-
     }
 
     //Delete all orders, then create some orders and check numbers of created orders
@@ -172,15 +172,55 @@ public class DeliveryTest {
         }
 
         // System.out.println();
-
-
         // List<OrderRealDto> list = given().header()
 
     }
 
     @Test
     public void deleteOrderByIdTest() {
-        deleteOrderById(2806);
+
+        int orderId = orderCreationPrecondition();
+        deleteOrderById(orderId);
+    }
+
+    @Test
+    public void courierOrderAvailableForbiddenForStudent() {
+        Response response = executeGetMethodByStudent("/orders/available");
+        //TODO response.statusCode() <<---check it
+
+        System.out.println(response.statusCode());
+    }
+
+    @Test
+    public void courierOrderAssignForbiddenForStudent() {
+
+        int orderId = orderCreationPrecondition();
+
+        executePutMethodByStudent(String.format("/orders/assign/%s/assign", orderId));
+        System.out.println();
+        //TODO assert
+    }
+
+    @Test
+    public void createCourier() {
+
+        CourierCreation courierBody = new CourierCreation("nadia123456", "password1", "nadia");
+        //TODO random
+
+        Gson gson = new Gson();
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(gson.toJson(courierBody))
+                .log()
+                .all()
+                .post("/users/courier")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_OK);
+
     }
 
     //Method creates order and returns its id
@@ -221,5 +261,41 @@ public class DeliveryTest {
                 .assertThat()
                 .statusCode(HttpStatus.SC_OK);
 
+    }
+
+    //Method get for different paths
+    public Response executeGetMethodByStudent(String path) {
+
+        Response response = given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get(path)
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+        return response;
+    }
+
+    //Method Put for different paths
+    public Response executePutMethodByStudent(String path) {
+
+        Response response = given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .put(path)
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+        return response;
     }
 }
