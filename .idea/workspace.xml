@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Fixed issue #1 (URL deleted)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dto/CourierCreation.java" afterDir="false" />
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="lesson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PetStoreApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PetStoreApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryTest.createCourier">
+  <component name="RunManager" selected="JUnit.DeliveryTest">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
@@ -76,6 +76,22 @@
       <option name="PACKAGE_NAME" value="delivery" />
       <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryTest.checkCreateCourierSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="checkCreateCourierSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryTest.courierOrderAvailableForbiddenForStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.courierOrderStatusForbiddenForStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
@@ -106,13 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="delivery" />
       <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
-      <option name="METHOD_NAME" value="courierOrderAvailableForbiddenForStudent" />
+      <option name="METHOD_NAME" value="courierOrderStatusForbiddenForStudent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryTest.createCourier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.getOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
@@ -122,23 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="delivery" />
       <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
-      <option name="METHOD_NAME" value="createCourier" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.deleteOrderByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-homework10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
-      <option name="METHOD_NAME" value="deleteOrderByIdTest" />
+      <option name="METHOD_NAME" value="getOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryTest.createCourier" />
-        <item itemvalue="JUnit.DeliveryTest.courierOrderAssignForbiddenForStudent" />
-        <item itemvalue="JUnit.DeliveryTest.courierOrderAvailableForbiddenForStudent" />
-        <item itemvalue="JUnit.DeliveryTest.deleteOrderByIdTest" />
         <item itemvalue="JUnit.DeliveryTest" />
+        <item itemvalue="JUnit.DeliveryTest.checkCreateCourierSuccessful" />
+        <item itemvalue="JUnit.DeliveryTest.courierOrderAssignForbiddenForStudent" />
+        <item itemvalue="JUnit.DeliveryTest.getOrders" />
+        <item itemvalue="JUnit.DeliveryTest.courierOrderStatusForbiddenForStudent" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679931054406</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lesson">
+      <created>1680239926606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680239926606</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,9 +242,29 @@
     <MESSAGE value="Homework 10 + lesson 11" />
     <MESSAGE value="Homework 11 (lesson 13)" />
     <MESSAGE value="Fixed issue #1 (URL deleted)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue #1 (URL deleted)" />
+    <MESSAGE value="lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
+          <line>225</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="((RestAssuredResponseImpl)response).groovyResponse" custom="io.restassured.internal.RestAssuredResponseImpl" />

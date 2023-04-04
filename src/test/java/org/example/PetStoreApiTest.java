@@ -73,7 +73,7 @@ public class PetStoreApiTest {
                         all().
                         statusCode(HttpStatus.SC_OK).and().extract().path("status");
 
-        Assertions.assertEquals(status, "approved");
+        Assertions.assertEquals("approved", status);
     }
 
 }
