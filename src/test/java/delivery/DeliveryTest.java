@@ -13,8 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DeliveryTest {
 
@@ -232,15 +231,16 @@ public class DeliveryTest {
 
         assertAll(
                 "Grouped Assertions of Courier",
-                () -> assertEquals(HttpStatus.SC_OK, response.getStatusCode(), "Assert Status")
-                //TODO 2nd and more
-                //() -> assertEquals("testname", response.asString(), "2nd Assert")
+                () -> assertEquals(HttpStatus.SC_OK, response.getStatusCode(), "Check Status = 200"),
+                () -> assertNotNull( response.getBody().path("id"), "Check ID is NOT NULL"),
+                () -> assertNotNull( response.getBody().path("login"), "Check Login is NOT NULL")
         );
+      //  System.out.println();
     }
 
     //Method creates new courier
     public Response createCourier () {
-        CourierCreation courierBody = new CourierCreation(generateRandomLogin(), generateRandomName(), generateRandomPhone());
+        CourierCreation courierBody = new CourierCreation(generateRandomLogin(), generateRandomName(), generateRandomPass());
         Gson gson = new Gson();
 
         Response response = given()
@@ -255,19 +255,18 @@ public class DeliveryTest {
                 .all()
                 .extract()
                 .response();
-
         return response;
     }
     //Randoms
     public String generateRandomLogin() {
-        return RandomStringUtils.random(20, true, false);
+        return RandomStringUtils.random(8, true, false);
     }
-    public String generateRandomPhone() {
-        return RandomStringUtils.random(10, false, true);
+    public String generateRandomPass() {
+        return RandomStringUtils.random(8, true, true);
     }
 
     public String generateRandomName() {
-        return RandomStringUtils.random(40, true, true);
+        return RandomStringUtils.random(8, true, false);
     }
 
 

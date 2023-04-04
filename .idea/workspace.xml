@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="lesson">
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework for lesson 15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PetStoreApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PetStoreApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680239926606</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Homework for lesson 15">
+      <created>1680622826521</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622826521</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,25 +249,31 @@
     <MESSAGE value="Homework 11 (lesson 13)" />
     <MESSAGE value="Fixed issue #1 (URL deleted)" />
     <MESSAGE value="lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson" />
+    <MESSAGE value="Homework for lesson 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework for lesson 15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>205</line>
+          <line>202</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>225</line>
+          <line>222</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>234</line>
+          <line>231</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
+          <line>237</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
