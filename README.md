@@ -21,26 +21,6 @@ N | Check Name   | Status
 4 | Pos: Check (GET)  an existing order has status "approved"     | Pass
 
 
-Check-list for UI Tallinn Delivery:
-
-N | Check Name   |
--- | -------------|
-1 | Log-in successfully with correct login and pass |
-2 | Log-in failed with incorrect login\pass     |
-3 | Incorrect credentials message when login failed     |
-4 | Sign-In button incative when Login field is empty or has less then 2 symbols    |
-5 | Sign-In button incative when Password field is empty or has less then 8 symbols      |
-
-Using Xpath:
-
-N | Element   | XPath
--- | -------------|--------
-1 | Login Field  | //input[@data-name="username-input"]
-2 | Password Field  | //input[@data-name="password-input"]
-3 | Autorization error popup | //div[@data-name="authorizationError-popup"]
-4 | Close button for autorization error popup | //button[@data-name="authorizationError-popup-close-button"]
-5 | Sing-in button | //button[@data-name="signIn-button"]
-
 
 
 
