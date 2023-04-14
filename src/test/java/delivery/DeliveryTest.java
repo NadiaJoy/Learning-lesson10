@@ -35,7 +35,6 @@ public class DeliveryTest {
 
         RestAssured.baseURI = setupFunctions.getBaseUrl();
 
-
     }
 
     @Test

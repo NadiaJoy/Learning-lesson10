@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.SetupFunctions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -12,12 +13,27 @@ import  com.codeborne.selenide.Condition;
 
 
 public class WebAppTest {
+    public static String baseUrl;
+    public static String openUrl;
+    public static String username;
+    public static String pwd;
+
+    @BeforeAll
+    public static void setup() {
+        SetupFunctions setupFunctions = new SetupFunctions();
+
+        username = setupFunctions.getUsername();
+        pwd = setupFunctions.getPassword();
+
+         baseUrl = setupFunctions.getBaseUrl();
+         openUrl = baseUrl + ":3000/signing";
+    }
 
     @Test
     public void incorrectLogin() {
         Configuration.holdBrowserOpen = true;
         //Configuration.browser = "edge";
-        open("http://51.250.6.164:3000/signin");
+        open(openUrl);
 
         SelenideElement usernameInput = $(By.xpath("//input[@data-name='username-input']"));
         SelenideElement passwordInput = $(By.xpath("//input[@data-name='password-input']"));
@@ -33,14 +49,10 @@ public class WebAppTest {
 
     @Test
     public void successfulLogin() {
-        SetupFunctions setupFunctions = new SetupFunctions();
-
-        String username = setupFunctions.getUsername();
-        String pwd = setupFunctions.getPassword();
 
         Configuration.holdBrowserOpen = true;
 
-        open("http://51.250.6.164:3000/signin");
+        open(openUrl);
 
         SelenideElement usernameInput = $(By.xpath("//input[@data-name='username-input']"));
         SelenideElement passwordInput = $(By.xpath("//input[@data-name='password-input']"));
