@@ -13,6 +13,7 @@ import static io.restassured.RestAssured.given;
 public class SetupFunctions {
 
     String baseUrl;
+    String baseUrlUI;
     String username;
     String password;
 
@@ -22,6 +23,8 @@ public class SetupFunctions {
             Properties properties = new Properties();
             properties.load(input);
             baseUrl = properties.getProperty("baseUrl");
+            baseUrlUI = properties.getProperty("baseUrlUI");
+
             username = properties.getProperty("username");
             password = properties.getProperty("password");
         } catch (IOException e) {
@@ -31,6 +34,10 @@ public class SetupFunctions {
 
     public String getBaseUrl() {
         return baseUrl;
+    }
+
+    public String getBaseUrlUI() {
+        return baseUrlUI;
     }
 
     public String getUsername() {

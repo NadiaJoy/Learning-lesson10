@@ -1,35 +1,24 @@
 package delivery;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import helpers.SetupFunctions;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
-import  static com.codeborne.selenide.Selenide.*;
-import  com.codeborne.selenide.Condition;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class WebAppTest {
-    public  String baseUrl;
-    public  String username;
-    public  String pwd;
+    SetupFunctions setupFunctions = new SetupFunctions();
 
-    @BeforeAll
-    public void preSetup() {
-        SetupFunctions setupFunctions = new SetupFunctions();
-        baseUrl = setupFunctions.getBaseUrl();
+    public String baseUrlUI = setupFunctions.getBaseUrlUI();
+    public String username = setupFunctions.getUsername();
+    public String pwd = setupFunctions.getPassword();
 
-        username = setupFunctions.getUsername();
-        pwd = setupFunctions.getPassword();
-    }
+
     @BeforeEach
     public void setup() {
-         open(baseUrl);
+        open(baseUrlUI);
     }
 
     @AfterEach
@@ -40,33 +29,25 @@ public class WebAppTest {
 
     @Test
     public void incorrectLogin() {
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
 
-        SelenideElement usernameInput = $(By.xpath("//input[@data-name='username-input']"));
-        SelenideElement passwordInput = $(By.xpath("//input[@data-name='password-input']"));
-
-        usernameInput.setValue("hello");
-        passwordInput.setValue("12345678");
-
-        $(By.xpath("//button[@data-name=\"signIn-button\"]")).click();
-
-        $(By.xpath("//div[@data-name=\"authorizationError-popup\"]")).shouldBe(Condition.exist);
+        LoginPage loginPage = new LoginPage();
+        loginPage.insertLogin("hello");
+        loginPage.insertPassword("wrongpasswwoorrd");
+        loginPage.clickLogin();
+        loginPage.checkErrorPopup();
 
     }
 
     @Test
     public void successfulLogin() {
 
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
+        LoginPage loginPage = new LoginPage();
+        loginPage.insertLogin(username);
+        loginPage.insertPassword(pwd);
+        loginPage.clickLogin();
+        loginPage.checkSuccessfulLogin();
 
-        SelenideElement usernameInput = $(By.xpath("//input[@data-name='username-input']"));
-        SelenideElement passwordInput = $(By.xpath("//input[@data-name='password-input']"));
-
-        usernameInput.setValue(username);
-        passwordInput.setValue(pwd);
-
-        $(By.xpath("//button[@data-name=\"signIn-button\"]")).click();
-
-        $(By.xpath("//button[@data-name=\"createOrder-button\"]")).shouldBe(Condition.visible);
     }
 }

@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework for lesson 17">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/delivery/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +51,9 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebAppTest">
-    <configuration name="DeliveryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-lesson10" />
+  <component name="RunManager" selected="JUnit.WebAppTest (1)">
+    <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="delivery.*" />
@@ -66,8 +67,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryTest.createOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-lesson10" />
+    <configuration name="WebAppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="delivery.*" />
@@ -75,9 +76,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
-      <option name="METHOD_NAME" value="createOrderTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +93,22 @@
       <option name="PACKAGE_NAME" value="delivery" />
       <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebAppTest.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
+      <option name="METHOD_NAME" value="incorrectLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,29 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppTest.successfulLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-homework10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
-      <option name="METHOD_NAME" value="successfulLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebAppTest (1)" />
+        <item itemvalue="JUnit.DeliveryTest" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
         <item itemvalue="JUnit.WebAppTest" />
         <item itemvalue="JUnit.WebAppTest.successfulLogin (1)" />
-        <item itemvalue="JUnit.DeliveryTest.createOrderTest" />
-        <item itemvalue="JUnit.DeliveryTest (1)" />
-        <item itemvalue="JUnit.WebAppTest.successfulLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +250,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework 10 + lesson 11" />
