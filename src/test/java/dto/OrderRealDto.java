@@ -17,6 +17,7 @@ public class OrderRealDto {
     }
 
     public OrderRealDto() {
+        this.status = "OPEN";
     }
 
     public String getCustomerName() {

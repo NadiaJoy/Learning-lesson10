@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework for lesson 17">
-      <change afterPath="$PROJECT_DIR$/src/test/java/delivery/LoginPage.java" afterDir="false" />
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Lesson 19">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dto/OrderRealDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/OrderRealDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebAppTest (1)">
+  <component name="RunManager" selected="JUnit.DeliveryTest">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
@@ -63,6 +62,22 @@
       <option name="PACKAGE_NAME" value="delivery" />
       <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryTest.courierOrderStatusForbiddenForStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.DeliveryTest" />
+      <option name="METHOD_NAME" value="courierOrderStatusForbiddenForStudent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,29 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppTest.successfulLogin (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-lesson10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
-      <option name="METHOD_NAME" value="successfulLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WebAppTest (1)" />
         <item itemvalue="JUnit.DeliveryTest" />
+        <item itemvalue="JUnit.DeliveryTest.courierOrderStatusForbiddenForStudent" />
+        <item itemvalue="JUnit.WebAppTest (1)" />
         <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
         <item itemvalue="JUnit.WebAppTest" />
-        <item itemvalue="JUnit.WebAppTest.successfulLogin (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681473376744</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Lesson 19">
+      <created>1681500922094</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681500922094</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,7 +265,8 @@
     <MESSAGE value="Homework for lesson 15" />
     <MESSAGE value="Homework for lesson 15 (fixed courier creation and finished one TODO)" />
     <MESSAGE value="Homework for lesson 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework for lesson 17" />
+    <MESSAGE value="Lesson 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,18 +278,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>221</line>
+          <line>225</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>230</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>236</line>
-          <option name="timeStamp" value="4" />
+          <line>222</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -215,11 +215,11 @@ public class DeliveryTest {
     public void courierOrderStatusForbiddenForStudent() {
 
         int orderId = orderCreationPrecondition();
-        //TODO change this as it looks ugly
-        String body = "{\"status\": \"OPEN\"\n}";
 
+        OrderRealDto orderRealDto = new OrderRealDto();
+        Gson gson = new Gson();
 
-        Response response = executePutMethodWithBodyByStudent((String.format("/orders/%s/status", orderId)), body);
+        Response response = executePutMethodWithBodyByStudent((String.format("/orders/%s/status", orderId)), gson.toJson(orderRealDto));
         Assertions.assertEquals(HttpStatus.SC_FORBIDDEN, response.statusCode());
     }
 
