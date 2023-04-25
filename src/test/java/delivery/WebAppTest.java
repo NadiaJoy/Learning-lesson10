@@ -29,7 +29,6 @@ public class WebAppTest {
 
     @Test
     public void incorrectLogin() {
-        //Configuration.holdBrowserOpen = true;
 
         LoginPage loginPage = new LoginPage();
         loginPage.insertLogin("hello");
@@ -42,7 +41,6 @@ public class WebAppTest {
     @Test
     public void successfulLogin() {
 
-        //Configuration.holdBrowserOpen = true;
         LoginPage loginPage = new LoginPage();
         loginPage.insertLogin(username);
         loginPage.insertPassword(pwd);

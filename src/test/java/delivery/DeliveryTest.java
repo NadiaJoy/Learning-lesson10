@@ -183,8 +183,6 @@ public class DeliveryTest {
                 .extract()
                 .as(OrderRealDto[].class);
 
-        //System.out.println(orderRealDtoArray.length);
-        //System.out.println(orderRealDtoArrayAfter.length);
         Assertions.assertEquals(0, orderRealDtoArray.length);
 
     }
@@ -234,7 +232,6 @@ public class DeliveryTest {
                 () -> assertNotNull( response.getBody().path("id"), "Check ID is NOT NULL"),
                 () -> assertNotNull( response.getBody().path("login"), "Check Login is NOT NULL")
         );
-      //  System.out.println();
     }
 
     //Method creates new courier

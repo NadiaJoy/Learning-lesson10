@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Lesson 19">
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Fix Issue #2, use dto pattern now">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dto/OrderRealDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/OrderRealDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,9 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn test" />
+      <command value="mvn test -Dtest=WebAppTest " />
+      <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=edge" />
+      <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=opera" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.DeliveryTest">
@@ -231,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681500922094</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix Issue #2, use dto pattern now">
+      <created>1681503105612</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681503105612</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,25 +277,21 @@
     <MESSAGE value="Homework for lesson 15 (fixed courier creation and finished one TODO)" />
     <MESSAGE value="Homework for lesson 17" />
     <MESSAGE value="Lesson 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 19" />
+    <MESSAGE value="Fix Issue #2, use dto pattern now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Issue #2, use dto pattern now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>201</line>
+          <line>199</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>225</line>
+          <line>219</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
-          <line>222</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
