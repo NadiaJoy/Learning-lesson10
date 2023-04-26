@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Fix Issue #2, use dto pattern now">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Fix Issue #3, redundant code was removed">
+      <change afterPath="$PROJECT_DIR$/src/test/java/db/DBmanager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/delivery/IntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/WebAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.example.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.example.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
       <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=opera" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryTest">
+  <component name="RunManager" selected="JUnit.IntegrationTest">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
@@ -86,6 +89,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.IntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.dummy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.IntegrationTest" />
+      <option name="METHOD_NAME" value="dummy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebAppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-homework10" />
       <extension name="coverage">
@@ -101,44 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-lesson10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebAppTest.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-homework10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebAppTest" />
-      <option name="METHOD_NAME" value="incorrectLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest" />
+        <item itemvalue="JUnit.IntegrationTest.dummy" />
         <item itemvalue="JUnit.DeliveryTest" />
         <item itemvalue="JUnit.DeliveryTest.courierOrderStatusForbiddenForStudent" />
         <item itemvalue="JUnit.WebAppTest (1)" />
-        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
-        <item itemvalue="JUnit.WebAppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681503105612</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fix Issue #3, redundant code was removed">
+      <created>1682441104008</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682441104008</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +288,9 @@
     <MESSAGE value="Homework for lesson 17" />
     <MESSAGE value="Lesson 19" />
     <MESSAGE value="Fix Issue #2, use dto pattern now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Issue #2, use dto pattern now" />
+    <MESSAGE value="Fix Issue #3, commented code was removed" />
+    <MESSAGE value="Fix Issue #3, redundant code was removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Issue #3, redundant code was removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,6 +304,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/delivery/DeliveryTest.java</url>
           <line>219</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/delivery/IntegrationTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
