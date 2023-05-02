@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class DBmanager {
 
 
-    public Connection connect() throws SQLException {
+    public Connection connect()  {
         SetupFunctions setupFunctions = new SetupFunctions();
 
         String host = setupFunctions.getDbHost();
@@ -36,7 +36,7 @@ public class DBmanager {
             System.out.println(e.getMessage());
         }
 
-     //   Statement s = connection.createStatement();
+        //Statement s = connection.createStatement();
 
         return connection;
     }
