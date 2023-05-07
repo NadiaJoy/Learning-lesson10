@@ -129,7 +129,7 @@ public class IntegrationTest {
     public void executeSearchAndCompare(int orderId) {
 
         //step 1
-        String sql = String.format("Select * from orders  id = %d;", orderId);
+        String sql = String.format("Select * from orders where id = %d;", orderId);
 
         System.out.println();
 
