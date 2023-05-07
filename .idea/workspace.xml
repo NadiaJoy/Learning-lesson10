@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="Homework 20: p.1.1 and p.1.2">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="25a9255e-61a8-4aaf-a5d6-51545defb185" name="Changes" comment="added randoms;  added variables from setup functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/delivery/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delivery/IntegrationTest.java" afterDir="false" />
     </list>
@@ -56,7 +55,38 @@
       <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=opera" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb (1)">
+  <component name="RunManager" selected="JUnit.IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp">
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.IntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Learning-lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="delivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="delivery" />
+      <option name="MAIN_CLASS_NAME" value="delivery.IntegrationTest" />
+      <option name="METHOD_NAME" value="createOrderUsingApiAndCheckBySearchInWebApp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntegrationTest.createOrderUsingWebAndCheckDb (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-lesson10" />
       <extension name="coverage">
@@ -105,44 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebRemoteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-homework10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebRemoteTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebRemoteTest.incorrectLoginAndCheckPopupParallel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Learning-homework10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="delivery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="delivery" />
-      <option name="MAIN_CLASS_NAME" value="delivery.WebRemoteTest" />
-      <option name="METHOD_NAME" value="incorrectLoginAndCheckPopupParallel" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp" />
         <item itemvalue="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb (1)" />
+        <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb" />
         <item itemvalue="JUnit.IntegrationTest.dummy" />
-        <item itemvalue="JUnit.WebRemoteTest" />
-        <item itemvalue="JUnit.WebRemoteTest.incorrectLoginAndCheckPopupParallel" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682535505284</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added randoms;  added variables from setup functions.">
+      <created>1683480889474</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683480889474</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +306,8 @@
     <MESSAGE value="Fix Issue #3, commented code was removed" />
     <MESSAGE value="Fix Issue #3, redundant code was removed" />
     <MESSAGE value="Homework 20: p.1.1 and p.1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework 20: p.1.1 and p.1.2" />
+    <MESSAGE value="added randoms;  added variables from setup functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="added randoms;  added variables from setup functions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
