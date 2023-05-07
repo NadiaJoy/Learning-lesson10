@@ -6,6 +6,7 @@ import db.DBmanager;
 import helpers.SetupFunctions;
 import helpers.Status;
 import io.restassured.RestAssured;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
@@ -23,6 +24,10 @@ public class IntegrationTest {
     static DBmanager dBmanager;
     static String token;
 
+    static String baseUrlUI;
+    static String username;
+    static String password;
+
     @BeforeAll
     public static void setUp() {
         //open connection
@@ -35,6 +40,10 @@ public class IntegrationTest {
         System.out.println("token: " + setupFunctions.getToken());
         token = setupFunctions.getToken();
         RestAssured.baseURI = setupFunctions.getBaseUrl();
+
+        baseUrlUI = setupFunctions.getBaseUrlUI();
+        username = setupFunctions.getUsername();
+        password = setupFunctions.getPassword();
     }
 
     @AfterAll
@@ -45,18 +54,16 @@ public class IntegrationTest {
     }
 
 
-    //TODO 3458
     @Test
     public void createOrderUsingWebAndCheckDb () {
-        open("http://51.250.6.164:3000");
-        SelenideElement nameInput = $(By.id ("username")).setValue("dianadia");
-        SelenideElement passInput = $(By.id ("password")).setValue("hellouser123");
+        open(baseUrlUI);
+        SelenideElement nameInput = $(By.id ("username")).setValue(username);
+        SelenideElement passInput = $(By.id ("password")).setValue(password);
         $(By.xpath("//*[@data-name='signIn-button']")).click();
 
-        $(By.id ("name")).setValue("myorder");
-        $(By.id ("phone")).setValue("668790");
+        $(By.id ("name")).setValue(generateRandomNameForOrder());
+        $(By.id ("phone")).setValue(generateRandomPhoneNumberForOrder());
         $(By.xpath("//*[@data-name='createOrder-button']")).click();
-
 
 
         String successText = $(By.xpath("//*[@data-name='orderSuccessfullyCreated-popup-close-button']/following-sibling::span"))
@@ -90,7 +97,7 @@ public class IntegrationTest {
 
             if (resultSet != null) {
                 while (resultSet.next()) {
-                    System.out.println(resultSet.getString(1) + resultSet.getString(2) + resultSet.getString(3));
+                    System.out.println(resultSet.getString(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
                     statusFromDb = resultSet.getString(3);
                     size++;
                 }
@@ -113,4 +120,14 @@ public class IntegrationTest {
 
         }
     }
+
+    //Randoms
+    public String generateRandomNameForOrder() {
+        return RandomStringUtils.random(8, true, false);
+    }
+    public String generateRandomPhoneNumberForOrder() {
+        return RandomStringUtils.random(8, false, true);
+    }
+
+
 }
