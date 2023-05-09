@@ -2,6 +2,7 @@ package delivery;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.ex.ElementNotFound;
 import com.google.gson.Gson;
 import db.DBmanager;
 import dto.OrderRealDto;
@@ -116,10 +117,10 @@ public class IntegrationTest {
                     () -> Assertions.assertEquals(comment, commentText, "Comment is not OK!")
             );
             //it seems not working as I want
-        } catch (NoSuchElementException e) {
-            System.out.println("Order page not found");
-            //e.printStackTrace();
-            Assertions.fail("No Such Element Exception");
+        } catch (ElementNotFound e) {
+            System.out.println("Order page not found!");
+            e.printStackTrace();
+            Assertions.fail("Element Not Found Exception");
 
         }
 

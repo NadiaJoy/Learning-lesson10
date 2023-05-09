@@ -55,7 +55,7 @@
       <command value="mvn test -Dtest=WebAppTest -Dselenide.browser=opera" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb (1)">
+  <component name="RunManager" selected="JUnit.IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp">
     <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Learning-lesson10" />
       <extension name="coverage">
@@ -137,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp" />
         <item itemvalue="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb (1)" />
         <item itemvalue="JUnit.IntegrationTest" />
-        <item itemvalue="JUnit.IntegrationTest.createOrderUsingApiAndCheckBySearchInWebApp" />
         <item itemvalue="JUnit.IntegrationTest.createOrderUsingWebAndCheckDb" />
         <item itemvalue="JUnit.IntegrationTest.dummy" />
       </list>
@@ -273,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683488017375</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Homework 21">
+      <created>1683527435951</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683527435951</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
