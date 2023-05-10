@@ -1,6 +1,8 @@
 package delivery;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ex.ElementNotFound;
 import com.google.gson.Gson;
@@ -19,9 +21,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -106,9 +108,20 @@ public class IntegrationTest {
         $(By.xpath("//*[@data-name='searchOrder-submitButton']")).click();
         //step 3. check the fields are OK
         try {
-            String nameText = $(By.xpath("//*[@data-name='order-item-0']/span")).shouldBe(Condition.visible).getAttribute("innerHTML");
-            String phoneText = $(By.xpath("//*[@data-name='order-item-1']/span")).shouldBe(Condition.visible).getAttribute("innerHTML");
-            String commentText = $(By.xpath("//*[@data-name='order-item-2']/span")).shouldBe(Condition.visible).getAttribute("innerHTML");
+
+           $$(By.xpath("//*[starts-with(@data-name,'order-item-')]/span"))
+                    .shouldBe(CollectionCondition.allMatch("All elements should be visible",
+                                    element -> element.isDisplayed() ));
+
+        } catch (ElementNotFound e) {
+            System.out.println("Order elements not found!");
+            e.printStackTrace();
+            Assertions.fail("Elements Not Found");
+
+        }
+            String nameText = $(By.xpath("//*[@data-name='order-item-0']/span")).getAttribute("innerHTML");
+            String phoneText = $(By.xpath("//*[@data-name='order-item-1']/span")).getAttribute("innerHTML");
+            String commentText = $(By.xpath("//*[@data-name='order-item-2']/span")).getAttribute("innerHTML");
 
             assertAll(
                     "Grouped Assertions for Order",
@@ -116,13 +129,6 @@ public class IntegrationTest {
                     () -> Assertions.assertEquals(phone, phoneText, "Phone is not OK!"),
                     () -> Assertions.assertEquals(comment, commentText, "Comment is not OK!")
             );
-            //it seems not working as I want
-        } catch (ElementNotFound e) {
-            System.out.println("Order page not found!");
-            e.printStackTrace();
-            Assertions.fail("Element Not Found Exception");
-
-        }
 
     }
 
